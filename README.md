@@ -1,6 +1,6 @@
-# Create a Azure Blob Storage account with a blob service and queue service
+# Create and connect to Azure Storage services using .NET Aspire
 
-`dotnet-aspire-connect-storage` is a demo project that shows how to create an Azure storage account using the [Azure Developer CLI](https://learn.microsoft.com/en-us/azure/developer/azure-developer-cli/overview)(azd), and how to connect to the storage account locally using a console application to perform essential tasks.
+`dotnet-aspire-connect-storage` is a demo project that shows how to create an Azure storage account using the [Azure Developer CLI](https://learn.microsoft.com/en-us/azure/developer/azure-developer-cli/overview)(azd), and how to connect to it locally using a .NET Aspire app.
 
 ## Prerequisites
 
@@ -23,7 +23,8 @@ The following prerequisites are required to use this application.  Please ensure
   
       ```bash
       brew tap azure/azd && brew install azd
-      ```  
+      ```
+- [.NET 8.0](https://dotnet.microsoft.com/download/dotnet) installed locally.
 
 ### Quickstart
 
