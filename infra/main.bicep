@@ -58,7 +58,7 @@ module storageAccount './core/storage/storage-account.bicep' = {
   params: {
     location: location
     tags: tags
-    name:  '${abbrs.storageStorageAccounts}${environmentName}'
+    name:  'aspirestorage'
     kind: 'StorageV2'
     containers: ['fileuploads']
     queues: ['tickets']
