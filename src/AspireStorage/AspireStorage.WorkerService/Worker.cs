@@ -1,15 +1,17 @@
 using Azure.Storage.Queues;
 using Azure.Storage.Queues.Models;
 
-namespace AspireStorage.Worker;
+namespace AspireStorage.WorkerService;
 
-public sealed class Worker(
+public sealed class WorkerService(
     QueueServiceClient client,
-    ILogger<Worker> logger) : BackgroundService
+    ILogger<WorkerService> logger) : BackgroundService
 {
     protected override async Task ExecuteAsync(CancellationToken stoppingToken)
     {
         var queueClient = client.GetQueueClient("tickets");
+        await queueClient.CreateIfNotExistsAsync(cancellationToken: stoppingToken);
+
         while (!stoppingToken.IsCancellationRequested)
         {
             QueueMessage[] messages =
