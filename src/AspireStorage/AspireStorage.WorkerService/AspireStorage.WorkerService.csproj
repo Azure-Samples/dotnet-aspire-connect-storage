@@ -4,11 +4,11 @@
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <UserSecretsId>dotnet-AspireStorage.Worker-1f7d3ce6-ace5-4940-844a-4fd18e96266d</UserSecretsId>
+    <UserSecretsId>dotnet-AspireStorage.Worker-054a373f-b657-4f55-8eef-6c9468765679</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Aspire.Azure.Storage.Queues" Version="8.0.0-preview.3.24105.21" />
+    <PackageReference Include="Aspire.Azure.Storage.Queues" Version="8.0.1" />
     <PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.0" />
   </ItemGroup>
 
