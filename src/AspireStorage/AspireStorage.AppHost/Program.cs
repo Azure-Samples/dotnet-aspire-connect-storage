@@ -17,10 +17,14 @@ var apiService = builder.AddProject<Projects.AspireStorage_ApiService>("apiservi
 builder.AddProject<Projects.AspireStorage_Web>("webfrontend")
     .WithExternalHttpEndpoints()
     .WithReference(apiService)
+    .WaitFor(apiService)
     .WithReference(blobs)
-    .WithReference(queues); 
+    .WaitFor(blobs)
+    .WithReference(queues)
+    .WaitFor(queues);
 
 builder.AddProject<Projects.AspireStorage_WorkerService>("aspirestorage-workerservice")
-    .WithReference(queues);
+    .WithReference(queues)
+    .WaitFor(queues);
 
 builder.Build().Run();
